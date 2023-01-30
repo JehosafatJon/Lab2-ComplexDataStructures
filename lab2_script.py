@@ -1,25 +1,27 @@
 def main():
 
-    # TODO: Step 2 - Create a complex data structure
+    # Step 2 - Create a complex data structure
     about_me = {
-        'full_name':"Jonathan Hughes",'student_id':10297309,'pizza_toppings':[
+        'full_name':"Jonathan Hughes",
+        'student_id':10297309,
+        'pizza_toppings':[
             "PEPPERONI",
             "BACON",
             "PINEAPPLE"
         ],
-            'movies':[
-                {
-                    'title':"dune",
-                    'genre':"sci-fi"
-                },
-                {
-                    'title':"the big short",
-                    'genre':"drama"
-                }
-            ]
-        }
+        'movies':[
+            {
+                'title':"dune",
+                'genre':"sci-fi"
+            },
+            {
+                'title':"the big short",
+                'genre':"drama"
+            }
+        ]
+    }
 
-    # TODO: Step 3 - Add another movie to the data structure
+    # Step 3 - Add another movie to the data structure
     about_me['movies'].append({
         'title':"monty python's: the holy grail",
         'genre':"comedy"
@@ -40,16 +42,17 @@ def main():
 
     return
 
-# TODO: Step 4 - Function that prints student name and ID	
+# Step 4 - Function that prints student name and ID	
 def print_student_name_and_id(about_me):
 
-    print(f"My name is {about_me['full_name']}, but you can call me His Majesty {about_me['full_name'].split()[0]}, first of his name, defender of the seven kingdoms.")
+    print(f"My name is {about_me['full_name']}, but you can call me His Majesty {about_me['full_name'].split()[0]}.")
     print(f"My student ID is {about_me['student_id']}.\n")
 
     return
     
-# TODO: Step 5 - Function that adds pizza toppings to data structure
+# Step 5 - Function that adds pizza toppings to data structure
 def add_pizza_toppings(about_me, toppings):
+    
     about_me['pizza_toppings'].extend(toppings)
 
     about_me['pizza_toppings'].sort()
@@ -58,7 +61,7 @@ def add_pizza_toppings(about_me, toppings):
         about_me['pizza_toppings'][i] = t.lower()
     return
 
-# TODO: Step 6 - Function that prints bullet list of pizza toppings
+# Step 6 - Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
 
     print(f"My favourite pizza toppings are:")
@@ -68,7 +71,7 @@ def print_pizza_toppings(about_me):
 
     return
 
-# TODO: Step 7 - Function that prints comma-separated list of movie genres
+# Step 7 - Function that prints comma-separated list of movie genres
 def print_movie_genres(about_me):
 
     print(f"I like to watch ", end="")
@@ -77,19 +80,20 @@ def print_movie_genres(about_me):
             print(f"{g['genre']}, ", end="")
         else:
             print(f"and {g['genre']} movies.\n")
+    
     return 
 
-# TODO: Step 8 - Function that prints comma-separated list of movie titles
+# Step 8 - Function that prints comma-separated list of movie titles
 def print_movie_titles(movie_list):
 
     print(f"Some of my favourite movies are ", end="")
-    for i,g in enumerate(movie_list):
+    for i,t in enumerate(movie_list):
         if i < len(movie_list)-1:
-            print(f"{g['title'].title()}, ", end="")
+            print(f"{t['title'].title()}, ", end="")
         else:
-            print(f"and {g['title'].title()}!\n")
-    return 
+            print(f"and {t['title'].title()}!\n")
     
+    return 
     
 if __name__ == '__main__':
     main()
