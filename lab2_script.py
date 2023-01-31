@@ -23,7 +23,7 @@ def main():
 
     # Step 3 - Add another movie to the data structure
     about_me['movies'].append({
-        'title':"monty python's: the holy grail",
+        'title':"monty python and the holy grail",
         'genre':"comedy"
         })
 
