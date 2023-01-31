@@ -27,6 +27,7 @@ def main():
         'genre':"comedy"
         })
 
+    # Step 4-8 function calls
     print_student_name_and_id(about_me)
 
     print_pizza_toppings(about_me)
